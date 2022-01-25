@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding: 0 30px 0 30px;
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  position: relative;
+}
+
+/* .container .graphic-section {
+  border: 1px solid red;
+} */
+
+.container .graphic-section img {
+  width: 450px;
+}
+
+.container .login-section {
+  /* border: 1px solid red; */
+  width: 400px;
+  font-family: 'Mulish', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .login-section h1.main-heading {
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: bolder;
+  text-align: center;
+  color: #444444;
+  padding-bottom: 40px;
+}
+
+/* .container .login-section form {
+  border: 1px solid red;
+} */
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+form .form-group:nth-child(2) {
+  padding-bottom: 12px;
+}
+
+form .form-group span {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  cursor: pointer;
+}
+
+form .form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 8px;
+}
+
+form .form-group p.links {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  padding-top: 5px;
+}
+
+form .form-group p.links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form .form-group p.links a:hover {
+  color: rgba(0, 0, 255, .8);
+}
+
+form .form-group input {
+  font-family: 'Mulish', sans-serif;
+  border-radius: 4px;
+  color: #000;
+}
+
+form .form-group input[type="email"] {
+  padding: 18px;
+  border: 1px solid #555555;
+  font-weight: 900;
+}
+
+form .form-group input[type="password"],
+input[type="text"] {
+  padding: 18px;
+  height: 55px;
+  font-weight: 900;
+  border: none;
+  background: #F0F0F0;
+}
+
+form .checkbox {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+form .checkbox label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0 0 1px 8px;
+}
+
+form .checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background: #FB5F66;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Mulish', sans-serif;
+}
+
+form p.links {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  padding-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form p.links a {
+  text-decoration: none;
+  color: rgba(0, 0, 255, 0.8);
+}
+
+.or-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.or-line {
+  background: #ccc;
+  width: 100%;
+  height: 1px;
+}
+
+.or-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  margin-top: 5px;
+}
+
+.social-login {
+  display: grid;
+  place-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.social-login .button {
+  width: 80%;
+  height: 45px;
+  color: #444444;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: none;
+  /* transition: .5s; */
+}
+
+.social-login .button.google:hover {
+  background: #FB5F66;
+  color: #fff;
+  border: none;
+}
+
+.social-login .button.facebook:hover {
+  background: #3b5998;
+  color: #fff;
+  border: none;
+}
+
+.social-login .button i {
+  margin-right: 20px;
+}
