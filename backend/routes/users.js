@@ -1,10 +1,19 @@
 const express = require('express');
 const router = express.Router();
+// const User = require('../models/user');
 
-
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
+const User = require('../models/user')
 //Register Route
- router.get('/register', (req,res,next) => {
-   res.send('resister');
+ router.post ('/register', (req,res,next) => {
+   let newUser = new User({
+     name: req.body.name,
+     email: req.body.email,
+     username: req.body.username,
+     password: req.body.password
+   });
+   
  });
 //authenticate route
 router.get('/authenticate',(req,res,next)=>{
@@ -14,8 +23,5 @@ router.get('/authenticate',(req,res,next)=>{
 router.get('/profile', (req,res,next)=>{
   res.send('profile');
 })
-//validate
-router.get('/validate',(req,res,next)=>{
-  res.send('validate');
-})
+
 module.exports = router;
