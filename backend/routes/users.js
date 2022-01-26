@@ -13,7 +13,7 @@ const User = require('../models/user')
      username: req.body.username,
      password: req.body.password
    });
-   
+
  });
 //authenticate route
 router.get('/authenticate',(req,res,next)=>{
