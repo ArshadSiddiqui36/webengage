@@ -17,7 +17,7 @@ const User = require('../models/user')
  });
 //authenticate route
 router.get('/authenticate',(req,res,next)=>{
-  res.send('authenticate');
+  res.send('authenticate done');
 })
 //profile route
 router.get('/profile', (req,res,next)=>{
