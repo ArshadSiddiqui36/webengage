@@ -10,14 +10,19 @@ const users = require('./routes/users');
 const config = require('./config/database');
 
 
-mongoose.connect(config.database,(req,res)=>{
-  console.log('connected to db');
-});
+ mongoose.connect("mongodb://localhost:27017/auth",{useUnifiedTopology: true, useNewUrlParser: true})
+.then(()=>{
+  console.log("database connected!");
+})
 
 app.use(cors());
 app.use(bodyParser.json())
 app.use('/users',users);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
+require("./config/passport")(passport);
+
 
 
 app.get('/', (req,res) => {
